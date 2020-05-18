@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
-//import { settings } from '../../data/dataStore.js'; POTRZEBNE DLA UKRYTEGO CREATORA / ZAKOMENTOWANE BO ESLINT NIE PUSZCZA COMMITA
+import { settings } from '../../data/dataStore.js';
 //import Creator from '../Creator/Creator.js';
 import Card from '../Card/Card.js';
 import Icon from '../Icon/Icon.js';
@@ -13,6 +13,10 @@ class Column extends React.Component {
       icon: PropTypes.string,
       cards: PropTypes.array,
         
+    }
+
+    static defaultProps = {
+      icon: settings.defaultColumnIcon,
     }
 
     render() {
